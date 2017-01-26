@@ -1,15 +1,21 @@
+#This function receives an array of numbers and check if the 
+#numbers is in this array
 
 def win_number(num,*lotery)
-	index = 0
+	#For each number in the array verify if is the number
 	lotery.each do |value|
-	if value.include?(num)
-		puts lotery.index(num)	
-		return true
-	else
-		return false
-	end
-end
+		if num == value
+			puts value
+			return true
+	 	break
+	 	else
+	 		puts value
+			
+			return false
+		end
 
+
+	end
 end
 
 
