@@ -8,6 +8,7 @@ def run_lotery(our_num,*lotery)
 	
 	lotery.each do |value|
 		#For each char of the number compare with our number	
+		puts value
 		result= 0
 		for num in 0..3
 			if our_num[num] == value[num]
@@ -15,10 +16,14 @@ def run_lotery(our_num,*lotery)
 			end
 			if result >= 3
 				winners.push(value)
+				#Set again variable to zero to count next
+				result = 0
+				print winners
 			end
+
 		end	
 	end
-	puts winners
+	return winners
 
 end
 #run_lotery('1234','9999', '5678', '1134', '1344')
