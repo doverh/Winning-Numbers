@@ -15,8 +15,7 @@ class TestWinningNumbers < Minitest::Test
 	end
 
 	def test_number_is_in_array
-		array=[1,2,8,10,20]
-		assert_equal(true,win_number(10,array))
+		assert_equal(true,win_number(10,[1,2,8,10,20]))
 	end
 
 end
