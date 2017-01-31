@@ -20,7 +20,7 @@ def run_numbers(numbers,array_numbers)
 				winners.push(value) if result == 3			
 		end
 	end
-	print winners
+	#print winners
 	return winners
 
 end
@@ -31,8 +31,7 @@ def prizes_winners(winners,prizes)
 	
 	results = []
 
-	#multi_array = names.shuffle.each_slice(2)
-	
+		#For each winner give a prize, if there is not a winner leave ""
 		for num in (0..prizes.length-1)
 			if !winners[num].nil?
 			 	results.push(winners[num],prizes[num])
@@ -41,8 +40,18 @@ def prizes_winners(winners,prizes)
 			end
 		end
 		print_results = results.each_slice(2).to_a
-		print print_results
+		#print print_results
 		return print_results
 			
 end
 
+def prizes_not_claimed(results)
+
+	prizes_unclaimed = []
+	results.each do |number, prize|
+		prizes_unclaimed.push(prize) if number == ""
+	end	
+	#print prizes_unclaimed
+	prizes_unclaimed
+
+end
