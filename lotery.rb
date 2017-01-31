@@ -9,19 +9,13 @@ def run_numbers(number,array_numbers)
 	array_numbers.each do |value|
 		#For each char of the number compare with our number	
 		result = 0
-		for num in 0..3
-			if number[num] == value[num]
-				result+=1
-			end
+		for num in 0..(array_numbers.length-1)
+				result+=1 if number[num] == value[num]		
 		end
 		#Check if our number has more than 3 equals chars from numbers
-		if result == 3
-			winners.push(value)
-				#Set again variable to zero to count next
-				#result = 0
-		end	
+			winners.push(value) if result == 3			
 	end
-	print winners
+	#print winners
 	return winners
 
 end

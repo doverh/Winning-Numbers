@@ -2,7 +2,7 @@
 # who won what? who was off by one? which prizes were not claimed? 
 # 3 functions each function inputs 2 arrays outputs 1
 
-def run_numbers(our_num,*array_numbers)
+def run_numbers(our_num,array_numbers)
 	#Define a variable to receive the winners
 	winners = []
 	
