@@ -6,7 +6,7 @@
 
 def generateWinnNumbers()
 	numbers = []
-	numbers = (0..5).map{rand(0..10)}
+	numbers = (0..5).map{rand(0..10)}.uniq
 	return numbers
 end
 
@@ -18,15 +18,14 @@ def run_numbers(numbers)
 	numbers.each do |number|
 	
 		array_numbers.each do |value|
-			#For each char of the number compare with our number	
-			result = 0
-				for num in 0..(array_numbers.length-1)
-					result+=1 if number[num] == value[num]		
-				end
-				#Check if our number has more than 3 equals chars from numbers
-				winners.push(value) if result == 3			
+			#For each char of the number compare with our numbers	
+			 if number == value		
+			winners.push(value) 			
+			end
 		end
-	end
+	end	
+	print array_numbers
+	print numbers
 	print winners
 	return winners
 
@@ -60,4 +59,4 @@ def prizes_not_claimed(results)
 	prizes_unclaimed
 
 end
-run_numbers(['123','133','555','159'])
+run_numbers([9])

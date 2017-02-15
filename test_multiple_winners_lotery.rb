@@ -1,7 +1,7 @@
 require "minitest/autorun"
 require_relative "multiple_winners_lotery.rb"
 
-class TestLotteryMultipleNumbers < Minitest::Test
+class TestLotteryMultiple < Minitest::Test
 	
 	# def test_check_my_numbers_won
 	# 	assert_equal(['1235', '1134'], run_numbers('1234',['9999', '5678', '1235', '1134', '1344'))
