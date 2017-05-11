@@ -1,6 +1,6 @@
 # Winning Numbers
 
-This repository stores the assignments given as homework for the TECH HIRE bootcamp.
+This repository stores a challenge give as assignment for the TECH HIRE bootcamp.
 
 Introduction
 
