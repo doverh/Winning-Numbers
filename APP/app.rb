@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative 'isbn_new.rb' 
+require_relative 'lotery.rb' 
 
 get '/' do
 	
@@ -7,11 +7,14 @@ get '/' do
 
 end
 
-post '/isbn_num' do
-	 num = params['num']
+ post '/show_result' do
+ 	 num1 = params['num1']
+	 num2 = params['num2']
+	 num3 = params['num3']
+	 num = [num1.to_i,num2.to_i,num3.to_i]
 	 result =  run_numbers(num)
-	 erb:winners, :locals => {:result=>results(num)}
-end
+ 	 erb:winners, :locals => {:result=>result}
+ end
 
 
 
