@@ -1,4 +1,4 @@
-# Winning_numbers
+# Winning Numbers
 
 This repository stores the assignments given as homework for the TECH HIRE bootcamp.
 
